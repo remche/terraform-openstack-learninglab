@@ -1,6 +1,6 @@
 resource "openstack_blockstorage_volume_v3" "ocfs2" {
   name        = "${var.hostname_prefix}-ocfs2"
-  size        = 3
+  size        = var.volume_size
   multiattach = true
   volume_type = var.volume_type
   lifecycle {
