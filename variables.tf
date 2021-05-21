@@ -47,3 +47,13 @@ variable "subnet_cidr" {
 variable "volume_type" {
   type = string
 }
+
+variable "volume_device" {
+  type = string
+  default = "/dev/vdb"
+}
+
+variable "volume_mount_point" {
+  type = string
+  default = "/mnt"
+}

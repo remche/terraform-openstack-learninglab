@@ -23,6 +23,7 @@ write_files:
         name = ocfs2
 runcmd:
   - [ sh, -c, '[ "$(hostname)" = "${instances[0][1]}" ] && (sudo o2info  ${disk} --mkfs || sudo  mkfs.ocfs2 ${disk})']
+  - sudo mkdir -p ${mount_point}
 mounts:
   - [ ${disk}, ${mount_point}, "ocfs2", "_netdev", "0", "0"]
 power_state:

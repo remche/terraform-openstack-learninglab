@@ -7,8 +7,8 @@ data "template_cloudinit_config" "config" {
       { users = local.users,
         instances = local.instances
         instance_count = var.instance_count
-        disk = "/dev/vdb",
-        mount_point = "/mnt"
+        disk = var.volume_device
+        mount_point = var.volume_mount_point
     })
   }
 }
