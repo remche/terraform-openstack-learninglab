@@ -3,6 +3,9 @@ resource "openstack_blockstorage_volume_v3" "ocfs2" {
   size        = 3
   multiattach = true
   volume_type = var.volume_type
+  lifecycle {
+    prevent_destroy  = true
+  }
 }
 
 resource "openstack_compute_volume_attach_v2" "ocfs2-attach" {
