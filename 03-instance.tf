@@ -3,7 +3,7 @@ data "template_cloudinit_config" "config" {
   part {
     filename     = "init.cfg"
     content_type = "text/cloud-config"
-    content = templatefile(("${path.module}/cloud-init.yml.tmpl"),
+    content = templatefile(("${path.module}/cloud-init.yml.tpl"),
       { users          = local.users,
         instances      = local.instances,
         instance_count = var.instance_count,
