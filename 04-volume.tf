@@ -5,7 +5,7 @@ resource "openstack_blockstorage_volume_v3" "ocfs2" {
   multiattach = true
   volume_type = var.volume_type
   lifecycle {
-    #prevent_destroy  = true
+    prevent_destroy  = true
   }
 }
 
