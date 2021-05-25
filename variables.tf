@@ -40,17 +40,17 @@ variable "dns_nameservers" {
 }
 
 variable "subnet_cidr" {
-  type = string
+  type    = string
   default = "192.168.1.0/24"
 }
 
 variable "shared_volume" {
-  type = bool
+  type    = bool
   default = false
 }
 
 variable "volume_size" {
-  type = number
+  type    = number
   default = 3
 }
 
@@ -59,11 +59,11 @@ variable "volume_type" {
 }
 
 variable "volume_device" {
-  type = string
+  type    = string
   default = "/dev/vdb"
 }
 
 variable "volume_mount_point" {
-  type = string
+  type    = string
   default = "/mnt"
 }

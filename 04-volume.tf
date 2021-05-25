@@ -1,5 +1,5 @@
 resource "openstack_blockstorage_volume_v3" "ocfs2" {
-  count       = var.shared_volume ? 1: 0
+  count       = var.shared_volume ? 1 : 0
   name        = "${var.hostname_prefix}-ocfs2"
   size        = var.volume_size
   multiattach = true
