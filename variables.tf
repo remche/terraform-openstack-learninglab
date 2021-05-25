@@ -60,6 +60,12 @@ variable "shared_volume" {
   description = "Use a OCFS shared volume"
 }
 
+variable "volume_id" {
+  type        = string
+  default     = ""
+  description = "ID of an existing volume. Will create one if it does not exist"
+}
+
 variable "volume_size" {
   type        = number
   default     = 3
