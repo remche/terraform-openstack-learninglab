@@ -1,69 +1,84 @@
 variable "user_count" {
-  type = number
+  type        = number
+  description = "Number of user to create"
 }
 
 variable "user_prefix" {
-  type = string
+  type        = string
+  description = "Prefix for users"
 }
 
 variable "image_name" {
-  type = string
+  type        = string
+  description = "Instance image"
 }
 
 variable "flavor" {
-  type = string
+  type        = string
+  description = "Instance template"
 }
 
 variable "key_pair" {
-  type = string
-
+  type        = string
+  description = "Instance keypair"
 }
 
 variable "instance_count" {
-  type = number
+  type        = number
+  description = "Number of instance to spawn"
 }
 
 variable "hostname_prefix" {
-  type = string
+  type        = string
+  description = "Prefix for instances"
 }
 
 variable "floating_ip_network" {
-  type = string
+  type        = string
+  description = "Public network to use"
 }
 
 variable "dns_domain" {
-  type = string
+  type        = string
+  description = "DNS domain"
 }
 
 variable "dns_nameservers" {
-  type = list(string)
+  type        = list(string)
+  description = "DNS nameservers"
 }
 
 variable "subnet_cidr" {
-  type    = string
-  default = "192.168.1.0/24"
+  type        = string
+  default     = "192.168.1.0/24"
+  description = "Neutron subnet CIDR"
 }
 
 variable "shared_volume" {
-  type    = bool
-  default = false
+  type        = bool
+  default     = false
+  description = "Use a OCFS shared volume"
 }
 
 variable "volume_size" {
-  type    = number
-  default = 3
+  type        = number
+  default     = 3
+  description = "OCFS shared volume size"
 }
 
 variable "volume_type" {
-  type = string
+  type        = string
+  description = "Cinder volume type (must support multiattach)"
 }
 
 variable "volume_device" {
-  type    = string
-  default = "/dev/vdb"
+  type        = string
+  default     = "/dev/vdb"
+  description = "OCFS shared volume device path"
 }
 
 variable "volume_mount_point" {
-  type    = string
-  default = "/mnt"
+  type        = string
+  default     = "/mnt"
+  description = "OCFS shared volume mount point"
 }
