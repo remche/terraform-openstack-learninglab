@@ -75,6 +75,7 @@ variable "volume_size" {
 variable "volume_type" {
   type        = string
   description = "Cinder volume type (must support multiattach)"
+  default     = ""
 }
 
 variable "volume_device" {
