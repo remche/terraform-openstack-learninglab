@@ -5,9 +5,9 @@ data "template_cloudinit_config" "config" {
     content_type = "text/cloud-config"
     content      = templatefile(("${path.module}/cloud-init.yml.tmpl"),
       { users = local.users,
-        instances = local.instances
-        instance_count = var.instance_count
-        disk = var.volume_device
+        instances = local.instances,
+        instance_count = var.instance_count,
+        disk = var.shared_volume ? var.volume_device : "",
         mount_point = var.volume_mount_point
     })
   }

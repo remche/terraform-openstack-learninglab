@@ -7,6 +7,8 @@ users:
     lock_passwd: false
     shell: /bin/bash
 %{ endfor ~}
+
+%{ if disk != "" ~}
 write_files:
   - path: /etc/ocfs2/cluster.conf
     content: |
@@ -28,3 +30,4 @@ mounts:
   - [ ${disk}, ${mount_point}, "ocfs2", "_netdev", "0", "0"]
 power_state:
   mode: reboot
+%{ endif ~}

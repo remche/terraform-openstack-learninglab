@@ -44,6 +44,11 @@ variable "subnet_cidr" {
   default = "192.168.1.0/24"
 }
 
+variable "shared_volume" {
+  type = bool
+  default = false
+}
+
 variable "volume_size" {
   type = number
   default = 3
