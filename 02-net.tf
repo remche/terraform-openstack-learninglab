@@ -14,6 +14,10 @@ resource "openstack_networking_subnet_v2" "tp_subnet" {
   gateway_ip      = cidrhost(var.subnet_cidr, -2)
   ip_version      = 4
   dns_nameservers = var.dns_nameservers
+  allocation_pool {
+    start = cidrhost(var.subnet_cidr, 1)
+    end   = cidrhost(var.subnet_cidr, -var.instance_count - 3)
+  }
 }
 
 resource "openstack_networking_router_v2" "router" {
