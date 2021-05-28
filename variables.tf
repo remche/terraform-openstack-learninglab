@@ -8,6 +8,12 @@ variable "user_prefix" {
   description = "Prefix for users"
 }
 
+variable "password_length" {
+  type        = number
+  description = "User passwords length"
+  default     = 16
+}
+
 variable "image_name" {
   type        = string
   description = "Instance image"

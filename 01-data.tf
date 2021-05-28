@@ -1,6 +1,6 @@
 resource "random_password" "password" {
   count   = var.user_count
-  length  = 16
+  length  = var.password_length
   special = false
 }
 
