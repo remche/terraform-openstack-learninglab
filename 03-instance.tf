@@ -14,6 +14,7 @@ data "template_cloudinit_config" "config" {
 }
 
 resource "openstack_compute_instance_v2" "instance" {
+  depends_on  = [openstack_networking_subnet_v2.tp_subnet]
   count       = var.instance_count
   name        = local.instances[count.index][1]
   image_name  = var.image_name
