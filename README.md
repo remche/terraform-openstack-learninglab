@@ -69,14 +69,17 @@ No modules.
 | <a name="input_image_name"></a> [image\_name](#input\_image\_name) | Instance image | `string` | n/a | yes |
 | <a name="input_instance_count"></a> [instance\_count](#input\_instance\_count) | Number of instance to spawn | `number` | n/a | yes |
 | <a name="input_key_pair"></a> [key\_pair](#input\_key\_pair) | Instance keypair | `string` | n/a | yes |
+| <a name="input_password_length"></a> [password\_length](#input\_password\_length) | User passwords length | `number` | `16` | no |
+| <a name="input_same_password"></a> [same\_password](#input\_same\_password) | Use same password for all users | `bool` | `false` | no |
 | <a name="input_shared_volume"></a> [shared\_volume](#input\_shared\_volume) | Use a OCFS shared volume | `bool` | `false` | no |
 | <a name="input_subnet_cidr"></a> [subnet\_cidr](#input\_subnet\_cidr) | Neutron subnet CIDR | `string` | `"192.168.1.0/24"` | no |
 | <a name="input_user_count"></a> [user\_count](#input\_user\_count) | Number of user to create | `number` | n/a | yes |
 | <a name="input_user_prefix"></a> [user\_prefix](#input\_user\_prefix) | Prefix for users | `string` | n/a | yes |
 | <a name="input_volume_device"></a> [volume\_device](#input\_volume\_device) | OCFS shared volume device path | `string` | `"/dev/vdb"` | no |
+| <a name="input_volume_id"></a> [volume\_id](#input\_volume\_id) | ID of an existing volume. Will create one if it does not exist | `string` | `""` | no |
 | <a name="input_volume_mount_point"></a> [volume\_mount\_point](#input\_volume\_mount\_point) | OCFS shared volume mount point | `string` | `"/mnt"` | no |
 | <a name="input_volume_size"></a> [volume\_size](#input\_volume\_size) | OCFS shared volume size | `number` | `3` | no |
-| <a name="input_volume_type"></a> [volume\_type](#input\_volume\_type) | Cinder volume type (must support multiattach) | `string` | n/a | yes |
+| <a name="input_volume_type"></a> [volume\_type](#input\_volume\_type) | Cinder volume type (must support multiattach) | `string` | `""` | no |
 
 ## Outputs
 
