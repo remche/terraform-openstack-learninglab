@@ -14,6 +14,12 @@ variable "password_length" {
   default     = 16
 }
 
+variable "same_password" {
+  type        = bool
+  description = "Use same password for all users"
+  default     = false
+}
+
 variable "image_name" {
   type        = string
   description = "Instance image"
