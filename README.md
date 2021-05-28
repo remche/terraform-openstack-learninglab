@@ -85,6 +85,6 @@ No modules.
 
 | Name | Description |
 |------|-------------|
-| <a name="output_instances"></a> [instances](#output\_instances) | n/a |
-| <a name="output_users"></a> [users](#output\_users) | n/a |
+| <a name="output_instances"></a> [instances](#output\_instances) | List of instances |
+| <a name="output_users"></a> [users](#output\_users) | List of users/passwords |
 <!-- END_TF_DOCS -->
