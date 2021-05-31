@@ -18,6 +18,7 @@ resource "openstack_compute_instance_v2" "instance" {
   count       = var.instance_count
   name        = local.instances[count.index][1]
   image_name  = var.image_name
+  image_id    = var.image_id
   flavor_name = var.flavor
   key_pair    = var.key_pair
   user_data   = data.template_cloudinit_config.config.rendered

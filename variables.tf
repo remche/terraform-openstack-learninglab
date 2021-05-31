@@ -20,9 +20,14 @@ variable "same_password" {
   default     = false
 }
 
+variable "image_id" {
+  type        = string
+  description = "Instance id"
+}
+
 variable "image_name" {
   type        = string
-  description = "Instance image"
+  description = "Instance image name"
 }
 
 variable "flavor" {
