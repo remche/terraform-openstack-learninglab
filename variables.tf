@@ -23,11 +23,13 @@ variable "same_password" {
 variable "image_id" {
   type        = string
   description = "Instance id"
+  default     = ""
 }
 
 variable "image_name" {
   type        = string
   description = "Instance image name"
+  default     = ""
 }
 
 variable "flavor" {
