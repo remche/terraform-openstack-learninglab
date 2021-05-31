@@ -66,7 +66,8 @@ No modules.
 | <a name="input_flavor"></a> [flavor](#input\_flavor) | Instance template | `string` | n/a | yes |
 | <a name="input_floating_ip_network"></a> [floating\_ip\_network](#input\_floating\_ip\_network) | Public network to use | `string` | n/a | yes |
 | <a name="input_hostname_prefix"></a> [hostname\_prefix](#input\_hostname\_prefix) | Prefix for instances | `string` | n/a | yes |
-| <a name="input_image_name"></a> [image\_name](#input\_image\_name) | Instance image | `string` | n/a | yes |
+| <a name="input_image_id"></a> [image\_id](#input\_image\_id) | Instance id | `string` | n/a | yes |
+| <a name="input_image_name"></a> [image\_name](#input\_image\_name) | Instance image name | `string` | n/a | yes |
 | <a name="input_instance_count"></a> [instance\_count](#input\_instance\_count) | Number of instance to spawn | `number` | n/a | yes |
 | <a name="input_key_pair"></a> [key\_pair](#input\_key\_pair) | Instance keypair | `string` | n/a | yes |
 | <a name="input_password_length"></a> [password\_length](#input\_password\_length) | User passwords length | `number` | `16` | no |
